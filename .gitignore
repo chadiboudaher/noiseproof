@@ -1,0 +1,12 @@
+   data/*
+   !data/splits/
+   !data/download_grid.sh
+   __pycache__/
+   *.pyc
+   .venv/
+   venv/
+   *.pt
+   *.ckpt
+   wandb/
+   .ipynb_checkpoints/
+   *.egg-info/
