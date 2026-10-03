@@ -1,12 +1,13 @@
-   data/*
-   !data/splits/
-   !data/download_grid.sh
-   __pycache__/
-   *.pyc
-   .venv/
-   venv/
-   *.pt
-   *.ckpt
-   wandb/
-   .ipynb_checkpoints/
-   *.egg-info/
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Python packaging
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+data/
