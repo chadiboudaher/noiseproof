@@ -1,7 +1,10 @@
 from pathlib import Path
 from noiseproof.data.grid import GRIDDataset
 from noiseproof.preprocessing.audio import load_audio
-from noiseproof.preprocessing.noise import calculate_power
+from noiseproof.preprocessing.noise import (
+    calculate_power,
+    match_noise_length
+)
 
 dataset = GRIDDataset(
     root_dir="data/raw/grid"
@@ -14,6 +17,11 @@ waveform_noise, sample_rate_noise = load_audio(
     Path(
         r"C:\Users\chadi\OneDrive\Desktop\fastapi-l\noiseproof\data\raw\noise\ch14.wav"
     )
+)
+
+waveform_noise = match_noise_length(
+    waveform_noise,
+    waveform_speech.shape[1]
 )
 
 speech_power = calculate_power(waveform_speech)
